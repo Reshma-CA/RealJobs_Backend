@@ -1,24 +1,20 @@
 services:
-  - name: web
-    buildCommand: |
-      pip install -r requirements.txt
-      python manage.py collectstatic --noinput
-
+  - type: web
+    name: realjobs-backend
+    env: python
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
     startCommand: gunicorn project.wsgi --bind 0.0.0.0:$PORT
-    env:
-      - key: PYTHONUNBUFFERED
-        value: "1"
     envVars:
       - key: SECRET_KEY
-        fromFile: .env  # Adjust based on your environment variable setup
+        fromFile: .env
       - key: DEBUG
-        value: "false"  # Adjust based on your deployment environment
-      # Add other environment variables as needed
+        value: "false"
+      - key: DATABASE_URL
+        fromFile: .env
 
 databases:
-  - name: realjobs_django_render  # Replace with your database name
-    plan: free-postgres  # Adjust based on your Render database plan
+  - name: jobsdb
+    plan: free  # Adjust based on your Render database plan
     envVars:
       - key: DATABASE_URL
-        fromFile: .env  # Adjust based on your environment variable setup
-      # Add other database environment variables as needed
+        fromService: jobsdb
