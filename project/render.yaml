@@ -2,7 +2,7 @@ services:
   - type: web
     name: realjobs-backend
     env: python
-    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --noinput
+    buildCommand: ./render-build.sh
     startCommand: gunicorn project.wsgi --bind 0.0.0.0:$PORT
     envVars:
       - key: SECRET_KEY
