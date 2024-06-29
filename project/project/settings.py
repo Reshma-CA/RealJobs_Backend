@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from datetime import timedelta
 from pathlib import Path
 import os
+import dj_database_url
+
+
 
 from dotenv import load_dotenv
 # Load environment variables from .env file
@@ -114,6 +117,17 @@ DATABASES = {
 
     }
 }
+
+DATABASES = {
+    'default': dj_database_url.config(
+        default='postgresql://realjobs_django_render_user:FIQ5UwXeIyKVDKtO98arnlzZjffw7DHo@dpg-cpvsu5aju9rs73akb930-a.oregon-postgres.render.com/realjobs_django_render',
+        engine='django.contrib.gis.db.backends.postgis'
+    )
+}
+# pvsu5aju9rs73akb930-a.oregon-postgres.render.com/realjobs_django_render")
+
+
+
 
 
 # Password validation
