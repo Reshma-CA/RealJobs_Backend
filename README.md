@@ -23,6 +23,8 @@ Backend: Powered by Python-Django API (Django Rest Framework) with GIS integrati
 
 Database: PostgreSQL for robust data management.
 
+**Project Demo link** : https://youtu.be/PN-aJW530Qw
+
 📂 GitHub Repositories:
 
 **Frontend Repository link**: https://github.com/Reshma-CA/Real_Jobs_Frontend
