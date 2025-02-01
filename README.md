@@ -15,7 +15,7 @@ I'm thrilled to introduce REALJOBS, my new platform designed to connect you with
 
 📍 Geographic Location Services: Locate nearby professionals with precision, ensuring faster and more efficient service.
 
-💻 Tech Stack:
+💻 Tech Stack :
 
 Frontend: Built with React, CSS, and Material-UI for a seamless user experience.
 
