@@ -3,7 +3,7 @@
 
 I'm thrilled to introduce REALJOBS, my new platform designed to connect you with skilled professionals for all your home service needs. Whether you need a plumber, electrician, painter, coconut plucker, or cleaner, REALJOBS has got you covered!
 
-🔧 Features Include:
+🔧 Features Include: 
 
 ✨ Google Authentication: Enjoy hassle-free and secure login using your Google account.
 
